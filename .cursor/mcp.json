@@ -4,7 +4,8 @@
       "type": "http",
       "url": "https://api.x.com/mcp",
       "auth": {
-        "CLIENT_ID": "NGdZYmo4VVp2T1BnRG55NlExOGQ6MTpjaQ",
+        "CLIENT_ID": "${env:X_OAUTH_CLIENT_ID}",
+        "CLIENT_SECRET": "${env:X_OAUTH_CLIENT_SECRET}",
         "scopes": [
           "tweet.read",
           "users.read",
