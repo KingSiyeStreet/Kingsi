@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
-# Idempotent Cloud Agent bootstrap. Auto-detects common dependency manifests
-# and no-ops when none are present. Safe to copy into any new repository.
+# Idempotent repository bootstrap for Cloud Agent environments.
+# Installs Grok CLI on every environment, then auto-detects app manifests.
 
 set -euo pipefail
 
@@ -10,6 +10,7 @@ cd "$repo_root"
 
 log() { printf '[install] %s\n' "$*"; }
 
+# --- Grok CLI (every Cloud Agent environment) --------------------------------
 install_grok_cli() {
   log "Installing Grok CLI (https://x.ai/cli/install.sh)"
   curl -fsSL https://x.ai/cli/install.sh | bash
@@ -26,6 +27,7 @@ install_grok_cli
 
 installed_something=0
 
+# --- Node.js (npm / pnpm / yarn) -------------------------------------------
 if [[ -f package.json ]]; then
   installed_something=1
   if [[ -f pnpm-lock.yaml ]]; then
@@ -45,6 +47,7 @@ if [[ -f package.json ]]; then
   fi
 fi
 
+# --- Python (pip / poetry / uv) --------------------------------------------
 if [[ -f requirements.txt ]]; then
   installed_something=1
   log "Detected requirements.txt -> pip install -r requirements.txt"
@@ -64,12 +67,14 @@ if [[ -f pyproject.toml ]]; then
   fi
 fi
 
+# --- Go ---------------------------------------------------------------------
 if [[ -f go.mod ]]; then
   installed_something=1
   log "Detected go.mod -> go mod download"
   go mod download
 fi
 
+# --- Rust -------------------------------------------------------------------
 if [[ -f Cargo.toml ]]; then
   installed_something=1
   log "Detected Cargo.toml -> cargo fetch"
@@ -77,7 +82,7 @@ if [[ -f Cargo.toml ]]; then
 fi
 
 if [[ "$installed_something" -eq 0 ]]; then
-  log "No dependency manifest found yet. Nothing to install."
+  log "No dependency manifest found yet (repository is greenfield). Nothing extra to install."
 fi
 
 log "Bootstrap complete."
