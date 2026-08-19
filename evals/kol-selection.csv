@@ -1,0 +1,18 @@
+handle,nom,tweets_lus,dernier_post,jours_stale,overlap,moy,decision,prochaine_methode,verif_vs_daily,preuve_2026_08_19
+@CryptoCavaleiro,Cavaleiro,5,2026-08-10,9,0/10,4.2,DROP_PRIMARY,"Browser/computerUse ≤15s chaque run (pas WebFetch 403, pas héritage mémoire). Citer SEULEMENT si tweet≤48h ET ticker/niveau. Ignorer giveaway.","DAILY_SKIP_UNVERIFIED — daily 03:04 n'a pas relu le wall, a hérité DROP 18/08. Improver a relu : J-9, giveaway 10/07, pin 02/04 RT TeraHash, 124 followers, 0 ticker.",Wall lisible (panel≠stop). Newest 10/08 YouTube #whales. 5 tweets PT. Artifact cavaleiro_wall_2026_08_19.webp
+@TeraHash,Tiago Cruz,1,2026-04-02,139,?,2.2,DO_NOT_ADD,Ne pas suivre les RT de Cavaleiro comme source.,CITE_INDIRECT_PIN — pas dans le daily 19/08 comme signal.,"Pin Cavaleiro 02/04 encore visible. Méta clowns, pas TA."
+liste:CryptoNews,liste X prompt,0,n/a,n/a,n/a,0.0,DROP_AS_HOP,Ne pas ouvrir la liste. Presse nommée.,NOT_IN_DAILY,Inaccessible sans session X.
+liste:TodaysNews,liste X prompt,0,n/a,n/a,n/a,0.0,DROP_AS_HOP,Skip.,NOT_IN_DAILY,Idem.
+liste:WLFI,liste X prompt,0,n/a,n/a,WLFI,0.0,REPLACE_OFFICIAL,"Web @worldlibertyfi / site officiel, pas liste opaque.",NOT_IN_DAILY_AS_LIST,WLFI token Vision 0.0604.
+liste:COLLAT,liste X prompt,0,n/a,n/a,?,0.0,DROP_AS_HOP,Retirer du hop X.,NOT_IN_DAILY,Jamais lu.
+liste:Littlebit,liste X prompt,0,n/a,n/a,?,0.0,DROP_AS_HOP,Retirer du hop X.,NOT_IN_DAILY,Jamais lu.
+@worldlibertyfi,WLFI officiel,0,non fetché X,n/a,WLFI,4.8,ADD_OFFICIAL_NOT_KOL,Web d'abord. Label officiel pas TA.,"PROXY_COINDESK_OK — daily a cité WorldClaw via CoinDesk RSS, pas comme KOL TA. RSS 19/08 confirme WLFI distancing WorldClaw.",CoinDesk 18-19/08 WorldClaw. Vision WLFI 0.0604.
+@Ripple,Ripple,0,non fetché X,n/a,XRP,5.2,ADD_OFFICIAL_NOT_KOL,ripple.com / SEC.gov primaire.,NOT_AS_KOL_IN_DAILY,XRP #1 watchlist. 0 tweet X.
+@XRPcryptowolf,XRPcryptowolf,0,non vérifié,n/a,XRP,3.8,PROBATION_NO_DEFAULT,Interdit hop-1.,NOT_IN_DAILY,High-volume bullish = bruit.
+@RippleXrpie,JackTheRippler,0,non vérifié,n/a,XRP,3.4,DO_NOT_ADD_DEFAULT,S/B trop bas.,NOT_IN_DAILY,Cadence nonstop.
+presse:CoinDesk,CoinDesk,0,2026-08-19 10:29Z,0,majors,8.2,KEEP_PROXY_LABELED,GET RSS https://www.coindesk.com/arc/outboundfeeds/rss/ . Label proxy pas «X trending».,VERIFIED — titres daily match RSS : SEC first major crypto rule ; Cuomo CLARITY ; Robinhood CEO ; WLFI/WorldClaw. Titre supplémentaire 10:29 BTC six-week range / FOMC minutes (daily 03:15 trop tôt pour celui-là).,RSS 19/08 10:48 UTC. KEEP.
+presse:crypto.news,crypto.news,0,2026-08-18+,0,broad,7.2,KEEP_PROXY_LABELED,GET https://crypto.news/feed/,VERIFIED — SEC Reg Crypto $75m exemption ; Citi BTC custody year-end. Attention : autre article S$75m Singapore freeze ≠ Reg Crypto.,RSS confirmé. KEEP.
+presse:SEC.gov,SEC,0,via CoinDesk/crypto.news,n/a,XRP/reg,8.4,KEEP_PRIMARY,Filings sec.gov > KOL. Daily a proxy via CoinDesk/crypto.news (pas le HTML sec.gov brut).,PROXY_OK_NOT_PRIMARY_DOC — daily n'a pas fetch sec.gov. Prochaine : WebFetch sec.gov si règle citée.,Règle «first major crypto rule» + Reg Crypto $75m via presse.
+media:NischalShetty,WazirX CEO,0,via Economic Times,n/a,ETF,3.0,DO_NOT_TREAT_AS_KOL,Presse secondaire. Pas hop-1.,"SECONDARY_UNVERIFIED_AS_TWEET — daily via WebSearch, pas tweet.",ETF outflows $389.7M weekly — non relu source primaire ce run improver.
+media:PrateekGupta,Mudrex,0,via Economic Times,n/a,BTC,2.5,DO_NOT_TREAT_AS_KOL,Skip.,SECONDARY_UNVERIFIED_AS_TWEET,Breakout commentary presse.
+@AndrewCuomo,Andrew Cuomo,0,via CoinDesk,n/a,reg,6.0,CITE_AS_NEWS_NOT_KOL,CoinDesk headline only.,VERIFIED_HEADLINE — ‘It has to pass’: Andrew Cuomo warns U.S. is falling behind on crypto rules. CLARITY Act.,Pas un KOL crypto. KEEP as news attribution.
