@@ -1,0 +1,24 @@
+handle,nom,tweets_lus,dernier_post,jours_stale,overlap,moy,decision,prochaine_methode,verif_vs_daily,preuve_2026_08_20
+@CryptoCavaleiro,Cavaleiro,5,2026-08-10,10,0/10,4.0,DROP_PRIMARY,urllib x.com (200) puis browser si pas datetime — hop obligatoire même DROP,DAILY_SKIP_UNVERIFIED,newest 10/08 YT #whales ; giveaway 10/07 ; pin 02/04 RT TeraHash ; 124 fol ; 0 ticker
+@TeraHash,Tiago Cruz,1,2026-04-02,140,?,2.2,DO_NOT_ADD,Ne pas suivre RT Cavaleiro,CITE_INDIRECT_PIN,pin 02/04 clowns encore visible ; pas dans daily 20/08
+Sergey Nazarov,Chainlink (WH),0,via CoinDesk,0,LINK,6.0,CITE_AS_NEWS_NOT_KOL,RSS CoinDesk URL obligatoire ; pas hop-1 X,DAILY_AS_KOL_WATCHLIST,daily §7 « KOL watchlist Nazarov → LINK » SANS tweet
+Brad Garlinghouse,Ripple (WH),0,via CoinDesk,0,XRP,6.0,CITE_AS_NEWS_NOT_KOL,ripple.com + CoinDesk ; pas KOL TA,DAILY_AS_KOL_WATCHLIST,daily XRP B « + KOL WH » = news meeting
+Donald Trump / CFTC,politique US,0,via CoinDesk,0,HYPE,6.2,CITE_AS_NEWS_NOT_KOL,headline only,DAILY_HYPE_CONV,CFTC IAC 20/08 + « bring Hyperliquid to US »
+Lookonchain,on-chain proxy,0,2026-08-19,1,BTC,7.0,KEEP_PROXY_LABELED,citer tx/whale id pas comme tweet,VERIFIED_IN_DAILY,whale 0x66 short 40x liq ~70039
+presse:CoinDesk,,0,2026-08-20,0,majors,8.4,KEEP_PROXY_LABELED,RSS coindesk.com/arc/outboundfeeds/rss/,VERIFIED,Clarity priced-in ; BTC 71-72k ; 3Md$ shorts ; BitGo KR
+presse:crypto.news,,0,timeout,n/a,broad,4.0,KEEP_FALLBACK_8S,timeout 8s puis skip ; CoinTelegraph,DAILY_USED_UNKNOWN_LATENCY,improver GET /feed timeout 20s
+presse:CoinTelegraph,,0,2026-08-20,0,broad,7.0,KEEP_PROXY_LABELED,cointelegraph.com/rss,USED_IN_DAILY,daily proxy list
+presse:SEC.gov,,0,2026-08-20,0,reg,8.4,KEEP_PRIMARY,sec.gov RSS,PROXY_OK,exemptions 75m$ citées daily
+@worldlibertyfi,WLFI officiel,0,n/a,n/a,WLFI,4.8,ADD_OFFICIAL_NOT_KOL,web officiel,NOT_AS_KOL_IN_DAILY,WLFI +2% cité comme preuve pas-altseason
+@Ripple,Ripple,0,n/a,n/a,XRP,5.2,ADD_OFFICIAL_NOT_KOL,ripple.com,NOT_AS_KOL,Garlinghouse via presse
+@XRPcryptowolf,,0,n/a,n/a,XRP,3.8,PROBATION_NO_DEFAULT,interdit hop-1,NOT_IN_DAILY,
+@RippleXrpie,JackTheRippler,0,n/a,n/a,XRP,3.4,DO_NOT_ADD_DEFAULT,S/B bas,NOT_IN_DAILY,
+liste:CryptoNews,,0,n/a,n/a,n/a,0,DROP_AS_HOP,Presse nommée,NOT_IN_DAILY,sans session X
+liste:TodaysNews,,0,n/a,n/a,n/a,0,DROP_AS_HOP,Skip,NOT_IN_DAILY,
+liste:WLFI,,0,n/a,n/a,WLFI,0,REPLACE_OFFICIAL,web officiel,NOT_IN_DAILY_AS_LIST,
+liste:COLLAT,,0,n/a,n/a,?,0,DROP_AS_HOP,Retirer,NOT_IN_DAILY,
+liste:Littlebit,,0,n/a,n/a,?,0,DROP_AS_HOP,Retirer,NOT_IN_DAILY,
+media:NischalShetty,,0,n/a,n/a,ETF,3.0,DO_NOT_TREAT_AS_KOL,pas hop-1,NOT_IN_DAILY_20,
+media:PrateekGupta,,0,n/a,n/a,BTC,2.5,DO_NOT_TREAT_AS_KOL,skip,NOT_IN_DAILY_20,
+Armstrong Coinbase,WH attendee,0,via CoinDesk,0,reg,5.5,CITE_AS_NEWS_NOT_KOL,liste attendees seulement,IN_DAILY_ATTENDEE,
+@AndrewCuomo,,0,via CoinDesk,1,reg,6.0,CITE_AS_NEWS_NOT_KOL,headline only,NOT_REPEATED_20,Clarity 19/08
