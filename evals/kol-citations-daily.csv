@@ -1,0 +1,14 @@
+date_daily,run_bc,nom_handle,claim_in_daily,source_reelle,tweet_le_48h,ticker,verified_live,decision,action_selection,note
+2026-08-21,bc-0c68faf7,@CryptoCavaleiro,5 champs X ; newest 10/08 J-10.51 ; giveaway oui ; 0 tickers ; hop urllib ; KOL stale ignoré,urllib x.com 200 + snowflake ids (browser 11:08 confirme YT 10/08 + pin 02/04),NON (J-10.84),(aucun),OUI_WALL_HOPPED,DROP_PRIMARY,rester hors hop-1 PRIMARY ; hop obligatoire chaque run pour dates,124 fol ; 0 overlap 10/10 watchlist ; YT #LiveTrading ≠ setup Vision
+2026-08-21,bc-0c68faf7,@TeraHash,non cité named ; pin Cavaleiro clowns encore sur le wall,browser 21/08 11:08 pin 02/04,NON (J-140),BTC sentiment,OUI_PIN_VISIBLE,DO_NOT_ADD,ne pas ajouter au roster hop-1,RT indirect via DROP_PRIMARY
+2026-08-21,bc-0c68faf7,Sergey Nazarov,ABSENT du daily (plus « KOL watchlist LINK »),n/a,n/a,LINK,OUI_ABSENT_CORRECT,CITE_AS_NEWS_NOT_KOL,garder NEWS_PROXY ; ne pas réintroduire en KOL,patch 20/08 tenu
+2026-08-21,bc-0c68faf7,Brad Garlinghouse,pas nommé KOL ; XRP banker hours = presse,CoinDesk RSS,NON,XRP,OUI_NEWS_PROXY,CITE_AS_NEWS_NOT_KOL,garder NEWS_PROXY,corrige daily 20/08 « + KOL WH »
+2026-08-21,bc-0c68faf7,CFTC Selipsky,réguler si CLARITY fail 20/08 16:17,CoinDesk,NON (pas un tweet),CLARITY,OUI_HEADLINE,CITE_AS_NEWS_NOT_KOL,pas hop X,NEWS_PROXY
+2026-08-21,bc-0c68faf7,Trump / CFTC / HYPE,HYPE NEWS_PROXY CFTC/Trump ≠ KOL ; size 0,CoinDesk + CG trending,NON,HYPE,OUI_LABELED_NEWS,CITE_AS_NEWS_NOT_KOL,2 conv hors-liste : CG+news OK ; pas KOL,zone 62-65 jamais taguée
+2026-08-21,bc-0c68faf7,Lookonchain,ABSENT,n/a,n/a,BTC,OUI_ABSENT,KEEP_PROXY_LABELED,réactiver seulement si tx/whale id live,plus de 0x66 ce run
+2026-08-21,bc-0c68faf7,presse:CoinDesk,BTC>75k 01:51 ; liq 2.74Md shorts ; Clarity priced-in vs PM +6,RSS 200,n/a,BTC,OUI,KEEP_PROXY_LABELED,PRIMARY presse,improver RSS Clarity×3 0 Nazarov
+2026-08-21,bc-0c68faf7,presse:CoinTelegraph,200 DMA reclaim ; Iran Economic D-Day (à recouper),RSS 200,n/a,broad,OUI,KEEP_PROXY_LABELED,PRIMARY presse,titre Iran non vérifié — daily a flag à recouper
+2026-08-21,bc-0c68faf7,presse:crypto.news,CLARITY stall Scott/Warren ; Coinbase CEO bull cycle,feed 200 <8s,n/a,broad,OUI,KEEP_PRIMARY_8S,upgrade vs FALLBACK timeout,improver homepage 83ms
+2026-08-21,bc-0c68faf7,presse:SEC.gov,Proposes New Regulation Crypto Assets,sec.gov 200,n/a,reg,OUI,KEEP_PRIMARY,label communiqué ≠ vote,daily honnête
+2026-08-21,bc-0c68faf7,Coinbase CEO / Armstrong,next bull cycle (titre) — pas élevé KOL TA,crypto.news,NON,reg,OUI_NEWS_WIRE,CITE_AS_NEWS_NOT_KOL,pas hop-1 X,
+2026-08-21,bc-0c68faf7,stratege Treasury 180k,buybacks / 180k — non vérifié,CoinDesk 20/08 15:16,NON,BTC,OUI_LABELED_UNVERIFIED,DO_NOT_TREAT_AS_KOL,exiger source primaire,daily a avoué non vérifié
