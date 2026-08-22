@@ -1,0 +1,31 @@
+handle,nom,tweets_lus,dernier_post,jours_stale,overlap,moy,decision,prochaine_methode,hop2_done,giveaway_source,mcp_status_daily,verif_vs_daily,preuve_2026_08_22
+@CryptoCavaleiro,Cavaleiro,5,2026-08-10,11.84,0/10,4.0,DROP_PRIMARY,urllib x.com (200) PUIS computerUse OBLIGATOIRE si 0 datetime OU 0 body — IDs snowflake ≠ skip,IMPROVER_YES_DAILY_NO,tweet_body_jul10_not_newest,absent (server not found),DAILY_HOP1_OK_HOP2_SKIP,urllib 200 254KB 0 datetime 0 full_text; newest 10/08 YT #Livetrading 16 views; pin 02/04 RT @TeraHash clowns; giveaway Bitfunded 10/07 (HTML regex true = FP); 124 fol / 1585 following / 787 posts; 0 ticker
+@TeraHash,Tiago Cruz,1,2026-04-02,141.68,?,2.2,DO_NOT_ADD,Ne pas suivre RT Cavaleiro,IMPROVER_YES,n/a,n/a,CITE_INDIRECT_PIN_STILL,pin Cavaleiro encore visible browser 22/08 11:11 — clowns Bull Market 157 views
+Sergey Nazarov,Chainlink (WH),0,absent daily 22/08,n/a,LINK,6.0,CITE_AS_NEWS_NOT_KOL,RSS CoinDesk URL ; pas hop-1 X,n/a,n/a,n/a,DAILY_CORRECT_ABSENT,0 mention KOL 22/08 (tenu 21/08)
+Brad Garlinghouse,Ripple (WH),0,absent as KOL,n/a,XRP,6.0,CITE_AS_NEWS_NOT_KOL,ripple.com + CoinDesk ; pas KOL TA,n/a,n/a,n/a,DAILY_CORRECT_ABSENT,0 mention 22/08
+CFTC Selipsky,régulateur US,0,absent daily 22/08,n/a,CLARITY,6.2,CITE_AS_NEWS_NOT_KOL,headline CoinDesk only,n/a,n/a,n/a,NOT_IN_DAILY_22,était NEWS_PROXY 21/08
+Donald Trump / CFTC,politique US,0,via CoinDesk,n/a,HYPE/CLARITY,6.2,CITE_AS_NEWS_NOT_KOL,headline only,n/a,n/a,n/a,DAILY_HYPE_NEWS_PROXY,TRUMP gainer CG +52.3 — daily skip hors-liste (pas KOL)
+Ray Dalio,macro WH,0,via CoinTelegraph 21/08 20:03,~0.6,BTC,5.8,CITE_AS_NEWS_NOT_KOL,titre CT seulement — pas hop X,n/a,n/a,n/a,DAILY_AS_NEWS_WIRE,"« buy a bit of BTC » — NEWS_PROXY correct, ne pas ADD_PRIMARY"
+Tom Lee,ETH WH,0,via crypto.news 21/08 20:26,~0.6,ETH,5.5,CITE_AS_NEWS_NOT_KOL,titre crypto.news seulement,n/a,n/a,n/a,DAILY_AS_NEWS_WIRE,ETH outperform BTC IA/RWA — pas tweet ≤48h
+Kevin Warsh,Fed / JH,0,calendrier 28/08 14:00 UTC,n/a,macro,6.5,CITE_AS_CALENDAR_NOT_KOL,KC Fed / Newsquawk — pas hop X,n/a,n/a,n/a,DAILY_CALENDAR,JH speech — pas un KOL crypto
+Paul Ryan / Canton / Digital Asset,RWA WH,0,via CT/crypto.news,~0.5,RWA,4.8,CITE_AS_NEWS_NOT_KOL,titre presse,n/a,n/a,n/a,DAILY_AS_NEWS_WIRE,Canton RWA US benefits 3 states
+Lookonchain,on-chain proxy,0,absent daily 22/08,n/a,BTC,7.0,KEEP_PROXY_LABELED,citer tx/whale id pas comme tweet,n/a,n/a,n/a,NOT_IN_DAILY_22,0 mention (était 0x66 le 20/08)
+presse:CoinDesk,,0,2026-08-22,0,majors,8.8,KEEP_PROXY_LABELED,RSS coindesk.com/arc/outboundfeeds/rss/,n/a,n/a,n/a,VERIFIED,200 87ms ; ZEC Grayscale ETF ; Treasury buyback ; Clarity ; ENA wait ; Illinois tax
+presse:crypto.news,,0,2026-08-22,0,broad,8.4,KEEP_PRIMARY_8S,timeout 8s puis skip ; 22/08 feed 200 125ms,n/a,n/a,n/a,VERIFIED_FAST,daily used Tom Lee + Canton
+presse:CoinTelegraph,,0,2026-08-22,0,broad,7.5,KEEP_PROXY_LABELED,cointelegraph.com/rss,n/a,n/a,n/a,USED_IN_DAILY,"200 25ms ; Dalio ; Bitget CEO (RSS, pas rapport) ; Treasury Not-QE"
+presse:SEC.gov,,0,2026-08-22,0,reg,8.0,KEEP_PRIMARY,sec.gov RSS,n/a,n/a,n/a,RSS_OK_NOT_CITED_22,"200 114ms — daily 21/08 l’avait, 22/08 non cité"
+Coinbase CEO / Armstrong,WH / news,0,absent daily 22/08,n/a,reg,5.5,CITE_AS_NEWS_NOT_KOL,titre presse seulement,n/a,n/a,n/a,NOT_IN_DAILY_22,était crypto.news 21/08
+Bitget CEO,exchange WH,0,CT RSS 22/08,0,BTC,5.0,CITE_AS_NEWS_NOT_KOL,titre CT — PAS dans le rapport daily,n/a,n/a,n/a,IN_RSS_NOT_IN_DAILY,« BTC near current YE ; US won’t buy » — garder NEWS_PROXY si cité
+stratege Treasury 180k,unverified,0,via CoinDesk 20/08,2,BTC,3.0,DO_NOT_TREAT_AS_KOL,exiger URL + niveau Vision,n/a,n/a,n/a,NOT_IN_DAILY_22,était labeled unverified 21/08
+@worldlibertyfi,WLFI officiel,0,n/a,n/a,WLFI,4.8,ADD_OFFICIAL_NOT_KOL,web officiel,n/a,n/a,n/a,NOT_AS_KOL_IN_DAILY,WLFI catch-up late — pas KOL
+@Ripple,Ripple,0,n/a,n/a,XRP,5.2,ADD_OFFICIAL_NOT_KOL,ripple.com,n/a,n/a,n/a,NOT_AS_KOL,
+@XRPcryptowolf,,0,n/a,n/a,XRP,3.8,PROBATION_NO_DEFAULT,interdit hop-1,n/a,n/a,n/a,NOT_IN_DAILY,
+@RippleXrpie,JackTheRippler,0,n/a,n/a,XRP,3.4,DO_NOT_ADD_DEFAULT,S/B bas,n/a,n/a,n/a,NOT_IN_DAILY,
+liste:CryptoNews,,0,n/a,n/a,n/a,0,DROP_AS_HOP,Presse nommée,n/a,n/a,n/a,NOT_IN_DAILY,sans session X
+liste:TodaysNews,,0,n/a,n/a,n/a,0,DROP_AS_HOP,Skip,n/a,n/a,n/a,NOT_IN_DAILY,
+liste:WLFI,,0,n/a,n/a,WLFI,0,REPLACE_OFFICIAL,web officiel,n/a,n/a,n/a,NOT_IN_DAILY_AS_LIST,
+liste:COLLAT,,0,n/a,n/a,?,0,DROP_AS_HOP,Retirer,n/a,n/a,n/a,NOT_IN_DAILY,
+liste:Littlebit,,0,n/a,n/a,?,0,DROP_AS_HOP,Retirer,n/a,n/a,n/a,NOT_IN_DAILY,
+media:NischalShetty,,0,n/a,n/a,ETF,3.0,DO_NOT_TREAT_AS_KOL,pas hop-1,n/a,n/a,n/a,NOT_IN_DAILY_22,
+media:PrateekGupta,,0,n/a,n/a,BTC,2.5,DO_NOT_TREAT_AS_KOL,skip,n/a,n/a,n/a,NOT_IN_DAILY_22,
+@AndrewCuomo,,0,via CoinDesk,n/a,reg,6.0,CITE_AS_NEWS_NOT_KOL,headline only,n/a,n/a,n/a,NOT_IN_DAILY_22,Clarity 19/08

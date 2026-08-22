@@ -1,0 +1,11 @@
+id,regle,seuil,action_si_casse,preuve_22_08,poids
+R1,PRIMARY X seulement si followers≥5k ET overlap watchlist≥2/10 ET newest tweet≤48h ET body≠giveaway,3 conditions AND,DROP_PRIMARY,Cavaleiro 124 fol + 0 overlap + J-11.84 + YT live → DROP confirmé,9
+R2,"Hop wall obligatoire même si DROP (dates live, pas mémoire)",urllib chaque run,FAIL section X,daily 22/08 hop-1 OK,8
+R3,Hop-2 computerUse si 0 datetime OU 0 body — IDs snowflake ne skippent PAS,body tweet extrait,X note <6,daily 22/08 SKIP hop-2 → X=5,10
+R4,Giveaway = body du newest tweet seulement (pas regex HTML 254KB),newest body,ne pas flagger YT live comme giveaway,HTML true / newest YT / giveaway=10/07,9
+R5,"NEWS_PROXY (CoinDesk/CT/crypto.news/SEC) ≠ KOL. Titre WH (Dalio, Tom Lee, Nazarov, Garlinghouse) n’ouvre pas de trade",tweet≤48h du hop X requis pour KOL,pas de trade hors-liste,Dalio/Tom Lee correctement news ; ZEC/ENA skip,8
+R6,Pin >90j (TeraHash 02/04) = DO_NOT_ADD même si visible,jours_stale>90,ne pas suivre RT,pin encore visible 22/08,7
+R7,mcp_status doit venir d’un ping GetMcpTools server=X (absent≠unauth),1 ping,X note <6 si 0 ping,daily a écrit non authentifié sans ping,8
+R8,Listes X (CryptoNews/TodaysNews/WLFI/COLLAT/Littlebit) = DROP_AS_HOP sans session,session X absente,ne pas scraper listes,tenu,6
+R9,Candidat PRIMARY nouveau seulement si : tweet body live + ticker checkable vs Vision + pas giveaway + pas YT promo,4 AND,rester NEWS_PROXY,aucun candidat 22/08,9
+R10,Lookonchain / on-chain = KEEP_PROXY_LABELED seulement avec tx/whale id du jour,id tx présent,sinon absent OK,absent 22/08,6
