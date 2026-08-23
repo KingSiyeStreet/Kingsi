@@ -1,0 +1,14 @@
+handle,nom,tweets_lus,dernier_post,jours_stale,overlap,moy,decision,prochaine_methode,hop2_done,giveaway_source,mcp_status_daily,verif_vs_daily,preuve_2026_08_23
+@CryptoCavaleiro,Cavaleiro,5,2026-08-10,12.5,0/10,4.0,DROP_PRIMARY,urllib x.com (200) PUIS computerUse OBLIGATOIRE si 0 datetime OU 0 body — IDs snowflake ≠ skip,IMPROVER_YES_DAILY_NO,tweet_body_jul10_not_newest,absent (daily a écrit « non authentifié » SANS ping),DAILY_HOP1_OK_HOP2_SKIP_LABEL_FAUX,urllib 200 252KB 0 datetime 0 full_text; browser 11:14 newest 10/08 YT #Livetrading giveaway=NON; pin 02/04 RT @TeraHash clowns; giveaway Bitfunded 10/07 (HTML 2 hits FP); 124 fol / 1586 following / 787 posts; 0 ticker
+@TeraHash,Tiago Cruz,1,2026-04-02,142.7,?,2.2,DO_NOT_ADD,Ne pas suivre RT Cavaleiro,IMPROVER_YES,n/a,n/a,CITE_INDIRECT_PIN_STILL,pin Cavaleiro encore visible browser 23/08 11:14
+Sergey Nazarov,Chainlink WH,0,absent daily,n/a,LINK,6.0,CITE_AS_NEWS_NOT_KOL,CoinDesk URL pas hop-1 X,n/a,n/a,n/a,DAILY_CORRECT_ABSENT,0 mention KOL 23/08
+Brad Garlinghouse,Ripple WH,0,absent,n/a,XRP,6.0,CITE_AS_NEWS_NOT_KOL,news banker hours,n/a,n/a,n/a,DAILY_CORRECT_ABSENT,0 mention
+Ray Dalio,macro WH,0,via CT,1.6,BTC,5.8,CITE_AS_NEWS_NOT_KOL,titre CT seulement,n/a,n/a,n/a,DAILY_AS_NEWS_WIRE,buy a bit of BTC — RSS 21/08 — pas ADD_PRIMARY
+Tom Lee,ETH WH,0,absent 23/08,n/a,ETH,5.5,CITE_AS_NEWS_NOT_KOL,titre presse,n/a,n/a,n/a,DAILY_ABSENT_OK,présent 22/08 via crypto.news ; absent 23/08
+Bitget CEO,exchange WH,0,via CT,1.6,BTC,5.0,CITE_AS_NEWS_NOT_KOL,titre CT range BTC,n/a,n/a,n/a,DAILY_AS_NEWS_WIRE,range fin d'année — pas tweet ≤48h hop X
+Kevin Warsh,Fed JH,0,calendrier 28/08,n/a,macro,6.5,CITE_AS_CALENDAR_NOT_KOL,KC Fed,n/a,n/a,n/a,DAILY_CALENDAR,PM Task Force 36.5% = bruit JH pas KOL
+Lookonchain,on-chain,0,absent,n/a,BTC,7.0,KEEP_PROXY_LABELED,whale id pas tweet,n/a,n/a,n/a,NOT_IN_DAILY_23,0x66 absent
+presse:CoinDesk,,0,2026-08-22,1,majors,8.8,KEEP_PROXY_LABELED,RSS,n/a,n/a,n/a,VERIFIED,squeeze ZEC ETF Grayscale Treasury CLARITY
+presse:crypto.news,,0,2026-08-23,0,broad,8.4,KEEP_PRIMARY_8S,timeout 8s ; 200 142ms,n/a,n/a,n/a,VERIFIED_FAST_CLICKBAIT,XRP ETF 1.55B flagged clickbait par daily — OK
+presse:CoinTelegraph,,0,2026-08-21,1.6,broad,7.5,KEEP_PROXY_LABELED,RSS,n/a,n/a,n/a,USED_IN_DAILY,Dalio + Bitget CEO
+presse:SEC.gov,,0,n/a,n/a,reg,8.0,KEEP_PRIMARY,sec.gov,n/a,n/a,n/a,RSS_OK_NOT_CITED_23,non cité 23/08
