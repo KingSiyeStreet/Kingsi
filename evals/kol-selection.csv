@@ -1,0 +1,15 @@
+handle,nom,tweets_lus,dernier_post,jours_stale,overlap,moy,decision,prochaine_methode,hop2_done,giveaway_source,mcp_status_daily,verif_vs_daily,preuve_2026_08_25
+@CryptoCavaleiro,Cavaleiro,5,2026-08-10,14.8,0/10,4.0,DROP_PRIMARY,urllib x.com → fxtwitter /status/{id} → computerUse si 0 body ; IDs snowflake ≠ skip,IMPROVER_YES_DAILY_FXTWITTER,tweet_body_aug10_yt_not_giveaway,"absent (daily ping OK, label correct)",DAILY_HOP1_OK_HOP2_FXTWITTER,urllib 200 254KB 0 datetime 0 body; fxtwitter 200 YT #Livetrading 10/08 14:54Z giveaway=NON 0 ticker; browser 125 fol / 1584 following / 787 posts; pin 02/04 RT @TeraHash; HTML giveaway 2 hits = Jul not newest
+@TeraHash,Tiago Cruz,1,2026-04-02,144.8,?,2.2,DO_NOT_ADD,Ne pas suivre RT/pin Cavaleiro,IMPROVER_YES,n/a,n/a,PIN_STILL_VISIBLE_BROWSER,pin Cavaleiro 02/04 encore visible 25/08 11:13
+Sergey Nazarov,Chainlink WH,0,absent daily,n/a,LINK,6.0,CITE_AS_NEWS_NOT_KOL,CoinDesk/RSS pas hop-1 X,n/a,n/a,n/a,DAILY_CORRECT_ABSENT,0 mention KOL 25/08
+Brad Garlinghouse,Ripple WH,0,absent,n/a,XRP,6.0,CITE_AS_NEWS_NOT_KOL,news banker hours,n/a,n/a,n/a,DAILY_CORRECT_ABSENT,0 mention named ; SK bank×Ripple = NEWS Asie
+Ray Dalio,macro WH,0,absent 25/08,n/a,BTC,5.8,CITE_AS_NEWS_NOT_KOL,titre CT seulement si présent,n/a,n/a,n/a,DAILY_ABSENT_OK,cité 23/08 via CT ; absent 25/08
+Tom Lee,ETH WH,0,via RSS 25/08,0.1,ETH,5.5,CITE_AS_NEWS_NOT_KOL,titre presse Bitmine,n/a,n/a,n/a,DAILY_AS_NEWS_WIRE,Bitmine +81 M$ ETH — pas tweet ≤48h hop X — ne pas ADD_PRIMARY
+Bitget CEO,exchange WH,0,absent 25/08,n/a,BTC,5.0,CITE_AS_NEWS_NOT_KOL,titre CT,n/a,n/a,n/a,DAILY_ABSENT_OK,présent 23/08 seulement
+Kevin Warsh,Fed JH,0,calendrier 28/08,n/a,macro,6.5,CITE_AS_CALENDAR_NOT_KOL,Fed calendar.json,n/a,n/a,n/a,DAILY_CALENDAR,28/08 14:00 UTC — pas KOL crypto
+Lookonchain,on-chain,0,absent,n/a,BTC,7.0,KEEP_PROXY_LABELED,whale id pas tweet,n/a,n/a,n/a,NOT_IN_DAILY_25,0x/tx absent — ne pas promouvoir PRIMARY
+Strategy/MSTR,treasury WH,0,via RSS 25/08,0.1,BTC,5.0,CITE_AS_NEWS_NOT_KOL,titre presse +2 Md$,n/a,n/a,n/a,DAILY_AS_NEWS_WIRE,pas tweet hop X
+presse:CoinDesk,,0,2026-08-25,0.4,majors,8.8,KEEP_PROXY_LABELED,RSS,n/a,n/a,n/a,VERIFIED,"Bitcoin hits $80,000 first time since May 00:55 UTC"
+presse:crypto.news,,0,2026-08-25,0,broad,8.4,KEEP_PRIMARY_8S,timeout 8s ; 200 104ms improver,n/a,n/a,n/a,USED_CLARITY_ODDS,CLARITY 82→10 via WebSearch — NEWS_PROXY
+presse:CoinTelegraph,,0,2026-08-24,0.4,broad,7.5,KEEP_PROXY_LABELED,RSS,n/a,n/a,n/a,USED_IN_DAILY,shorts >220 M$ @ 80k
+presse:SEC.gov,,0,2026-08-18,7,reg,8.0,KEEP_PRIMARY,sec.gov RSS,n/a,n/a,n/a,RSS_OK_STALE,Regulation Crypto Assets 18/08 — daily a correctement dit pas nouveau
