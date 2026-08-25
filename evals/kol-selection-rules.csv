@@ -1,0 +1,15 @@
+id,regle,seuil,action_si_casse,preuve_2026_08_25,poids
+R1,PRIMARY X seulement si followers≥5k ET overlap watchlist≥2/10 ET newest tweet≤48h ET body≠giveaway,4 conditions AND,DROP_PRIMARY,Cavaleiro 125 fol + 0 overlap + J-14.8 + YT live → DROP confirmé (3e check 23/24/25),9
+R2,"Hop wall obligatoire même si DROP (dates live, pas mémoire)",urllib chaque run,FAIL section X,daily 25/08 hop-1 OK 200,8
+R3,Hop-2 = fxtwitter /status/{id} PUIS computerUse si 0 datetime OU 0 body — IDs snowflake ne skippent PAS,body tweet extrait,X note <6 si 0 hop-2,25/08 daily fxtwitter 200 (OK) ; improver browser confirme ; 23/08 SKIP = FAIL,10
+R4,Giveaway = body du newest tweet seulement (pas regex HTML),newest body,ne pas flagger YT live comme giveaway,HTML 2 hits / newest YT 10/08 / giveaway plus vieux Jul,9
+R5,"NEWS_PROXY (CoinDesk/CT/crypto.news/SEC) ≠ KOL. Titre WH (Dalio, Tom Lee, Nazarov, Garlinghouse, Bitget, Strategy, Bitmine) n’ouvre pas de trade",tweet≤48h du hop X requis pour KOL,pas de trade hors-liste,Tom Lee/Bitmine + Strategy + SK×Ripple correctement news 25/08,8
+R6,Pin >90j (TeraHash 02/04) = DO_NOT_ADD même si visible,jours_stale>90,ne pas suivre RT,pin encore visible browser 25/08 11:13,7
+R7,mcp_status doit venir d’un ping GetMcpTools (absent≠unauth). Interdit « non authentifié » si mcp_status≠needsAuth,1 ping + champ mcp_status,X note <6 si 0 ping ou label faux,25/08 7× ping + label absent OK (vs 23/08 FAIL),10
+R8,Listes X (CryptoNews/TodaysNews/WLFI/COLLAT/Littlebit) = DROP_AS_HOP sans session,session X absente,ne pas scraper listes,tenu,6
+R9,Candidat PRIMARY nouveau seulement si : tweet body live + ticker checkable vs Vision + pas giveaway + pas YT promo,4 AND,rester NEWS_PROXY,aucun candidat 25/08 ; Lookonchain sans tx = pas PRIMARY,9
+R10,Lookonchain / on-chain = KEEP_PROXY_LABELED seulement avec tx/whale id du jour,id tx présent,sinon absent OK,absent 25/08,6
+R11,"Δ Polymarket citée = HTTP CLOB du run, pas snapshot mémoire. Échecs doit porter clob_http_count",≥3 GET prices-history + compteur,PM note <7 si 0 GET ; honesty<6 si compteur absent,25/08 147+ GET OK mais clob_http_count absent du rapport user,10
+R12,"crypto.news clickbait / odds non recoupés = flag, jamais size",2e source,ne pas sizer,CLARITY article utilisé comme NEWS_PROXY — OK,7
+R13,Échecs d’accès = section tableau obligatoire. Header « repo public » sans persist_commit= ≠ honesty OK,12 champs listés,honesty <6,25/08 section absente → honesty 4 (régression vs 24/08),10
+R14,"Si daily J-1 a persisté last-daily-report.md, J0 DOIT persister (même repo public)",commit daté du run,honesty FAIL + persist_commit=FAIL,24/08 f34db64 OK ; 25/08 skip = récidive,10
