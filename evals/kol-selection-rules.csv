@@ -1,0 +1,16 @@
+id,regle,seuil,action_si_casse,preuve_2026_08_26,poids
+R1,PRIMARY X seulement si followers≥5k ET overlap watchlist≥2/10 ET newest tweet≤48h ET body≠giveaway,4 conditions AND,DROP_PRIMARY,Cavaleiro 125 fol + 0 overlap + J-15.8 + YT live → DROP (4e check 23/24/25/26),9
+R2,"Hop wall obligatoire même si DROP (dates live, pas mémoire)",urllib chaque run,FAIL section X,daily 26/08 hop-1 OK 200 258KB,8
+R3,Hop-2 = fxtwitter /status/{id} PUIS computerUse si 0 datetime OU 0 body — IDs snowflake ne skippent PAS ; newest=max(created_at) pas 1er HTML,body tweet extrait,X note <6 si 0 hop-2,26/08 daily fxtwitter ×5 200 (OK) ; 1er ID HTML=pin avril — daily a quand même pris 10/08 via dates fxtwitter,10
+R4,Giveaway = body du newest tweet seulement (pas regex HTML),newest body,ne pas flagger YT live comme giveaway,HTML giveaway hits / newest YT 10/08 / giveaway Jul — daily OK,9
+R5,NEWS_PROXY (CoinDesk/CT/crypto.news/SEC/CryptoQuant) ≠ KOL. Titre WH n’ouvre pas de trade,tweet≤48h du hop X requis pour KOL,pas de trade hors-liste,ZRO CoinDesk **sans** NEWS_PROXY = FAIL ; CT/CryptoQuant labellés Proxy news = OK ; gate hors-liste non remplie = OK,8
+R6,Pin >90j (TeraHash 02/04) = DO_NOT_ADD même si visible,jours_stale>90,ne pas suivre RT,pin = 1er snowflake HTML 26/08 11:08,7
+R7,mcp_status doit venir d’un ping GetMcpTools dédié (absent≠unauth). Catalog search ≠ ping,1 ping + champ mcp_status,X note <6 si 0 ping ou label faux,26/08 catalog matches=[] seulement → X=5 ; label absent OK mais ping dédié manquant (régression vs 25/08 7× ping),10
+R8,Listes X (CryptoNews/TodaysNews/WLFI/COLLAT/Littlebit) = DROP_AS_HOP sans session,session X absente,ne pas scraper listes,tenu,6
+R9,Candidat PRIMARY nouveau seulement si : tweet body live + ticker checkable vs Vision + pas giveaway + pas YT promo,4 AND,rester NEWS_PROXY,aucun candidat 26/08,9
+R10,Lookonchain / on-chain = KEEP_PROXY_LABELED seulement avec tx/whale id du jour,id tx présent,sinon absent OK,absent 26/08,6
+R11,"Δ Polymarket citée = HTTP CLOB du run sur clobTokenIds + interval=max, pas snapshot mémoire. Échecs doit porter clob_http_count",≥3 GET prices-history max + compteur,PM note <7 si 0 GET ou conditionId ou 1d-only ; honesty<6 si compteur absent,26/08 140 GET **1d** (Hold Δ+3.0 réel) mais skip max + skip compteur user + skip markets?slug= → PM=6,10
+R12,"crypto.news clickbait / odds non recoupés = flag, jamais size ; timeout 8s",2e source + timeout 8s,ne pas sizer,timeout daily 20s = régression méthode,7
+R13,Échecs d’accès = section tableau obligatoire. Header « repo public » sans persist_commit= ≠ honesty OK,12 champs listés,honesty <6,26/08 section absente → honesty 3 (pire que 25/08=4),10
+R14,"Si daily J-1 a persisté last-daily-report.md, J0 DOIT persister (même repo public / owner-only)",commit daté du run,honesty FAIL + persist_commit=FAIL,24/08 f34db64 OK ; 25/08 skip ; **26/08 skip encore** (phrase owner-only nouvelle),10
+R15,CLOB market= clobTokenIds[0] (YES) pas conditionId ; last2 ET d24 ; 1d last2=0 ≠ window 0,n= sur max,ne pas écrire Δ≈0 sans max,improver Hold last2 0 / d24 +1.0 ; 82.5k last2 ≈0 / d24 −16.4 — daily 1d a vu −24.1 sur 82.5k (ok window) mais last2 non comparé,10

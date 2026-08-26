@@ -1,0 +1,16 @@
+handle,nom,tweets_lus,dernier_post,jours_stale,overlap,moy,decision,prochaine_methode,hop2_done,giveaway_source,mcp_status_daily,verif_vs_daily,preuve_2026_08_26
+@CryptoCavaleiro,Cavaleiro,5,2026-08-10,15.8,0/10,4.2,DROP_PRIMARY,"urllib x.com → fxtwitter /status/{id} (newest=max created_at, pas 1er ID HTML) → computerUse si 0 body",IMPROVER_YES_DAILY_FXTWITTER,tweet_body_aug10_yt_not_giveaway,"absent (daily catalog search, PAS ping dédié)",DAILY_HOP1_OK_HOP2_FXTWITTER_NO_DEDICATED_PING,urllib 200 258KB 0 datetime 0 body; 1er ID HTML=pin 02/04; fxtwitter newest 10/08 14:54Z YT #Livetrading giveaway=NON 0 ticker; 125 fol / 1584 following / 788 tweets; DROP confirmé J-15.8
+@TeraHash,Tiago Cruz,1,2026-04-02,145.8,?,2.2,DO_NOT_ADD,Ne pas suivre RT/pin Cavaleiro,IMPROVER_YES,n/a,n/a,PIN_STILL_FIRST_HTML_ID,1er snowflake HTML 26/08 = 2039778970074325492 02/04 « Não poderia concordar mais !! »
+Sergey Nazarov,Chainlink WH,0,absent daily,n/a,LINK,6.0,CITE_AS_NEWS_NOT_KOL,CoinDesk/RSS pas hop-1 X,n/a,n/a,n/a,DAILY_CORRECT_ABSENT,0 mention KOL 26/08
+Brad Garlinghouse,Ripple WH,0,absent,n/a,XRP,6.0,CITE_AS_NEWS_NOT_KOL,news banker hours,n/a,n/a,n/a,DAILY_CORRECT_ABSENT,0 mention named
+Ray Dalio,macro WH,0,absent 26/08,n/a,BTC,5.8,CITE_AS_NEWS_NOT_KOL,titre CT seulement si présent,n/a,n/a,n/a,DAILY_ABSENT_OK,cité 23/08 via CT ; absent 25+26/08
+Tom Lee,ETH WH,0,absent 26/08,n/a,ETH,5.5,CITE_AS_NEWS_NOT_KOL,titre presse Bitmine,n/a,n/a,n/a,DAILY_ABSENT_OK,présent 25/08 RSS seulement — pas ADD
+Bitget CEO,exchange WH,0,absent 26/08,n/a,BTC,5.0,CITE_AS_NEWS_NOT_KOL,titre CT,n/a,n/a,n/a,DAILY_ABSENT_OK,WebSearch F&G non repris
+Kevin Warsh,Fed JH,0,calendrier 28/08,n/a,macro,6.5,CITE_AS_CALENDAR_NOT_KOL,Fed calendar.json,n/a,n/a,n/a,DAILY_CALENDAR_PLUS_PM,28/08 14:00 UTC ; PM « dira X » AI 66% — pas KOL
+Lookonchain,on-chain,0,absent,n/a,BTC,7.0,KEEP_PROXY_LABELED,whale id pas tweet,n/a,n/a,n/a,NOT_IN_DAILY_26,tx absent — ne pas promouvoir PRIMARY
+Strategy/MSTR,treasury WH,0,RSS 26/08 (improver),0.1,BTC,5.0,CITE_AS_NEWS_NOT_KOL,titre presse,n/a,n/a,n/a,IMPROVER_RSS_NOT_IN_DAILY,CoinDesk 10:42 « Strategy cuts net leverage » — daily ne l’a pas repris — OK NEWS
+presse:CoinDesk,,1,2026-08-26,0.4,majors,8.8,KEEP_PROXY_LABELED,RSS CDATA,n/a,n/a,n/a,DAILY_USED_UNLABELED,ZRO +6% LayerZero **sans** label NEWS_PROXY → FAIL R5 ; improver RSS 25 items 10:45 BTC breather
+presse:crypto.news,,0,2026-08-25 21:23,0.6,broad,8.4,KEEP_PRIMARY_8S,timeout 8s (daily a mis 20),n/a,n/a,n/a,DAILY_RSS_BACKSTAGE,feed 200 items 200 ; non cité named dans le rapport FR
+presse:CoinTelegraph,,1,2026-08-26,0.1,broad,7.5,KEEP_PROXY_LABELED,RSS,n/a,n/a,n/a,DAILY_AS_NEWS_PROXY,« BTC slips from 80k / gold cools / yields down » + WLFI USD1 Canton — label Proxy news OK
+presse:CryptoQuant,,1,2026-08-26,0.1,BTC,6.5,CITE_AS_NEWS_NOT_KOL,titre presse pas hop X,n/a,n/a,n/a,DAILY_AS_NEWS_PROXY,« 83k close key » — daily a dit 83k close non. Ne pas ADD_PRIMARY
+presse:SEC.gov,,0,2026-08-18,8,reg,8.0,KEEP_PRIMARY,sec.gov RSS,n/a,n/a,n/a,NOT_IN_DAILY_26,stale 18/08
