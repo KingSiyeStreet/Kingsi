@@ -1,0 +1,16 @@
+handle,nom,tweets_lus,dernier_post,jours_stale,overlap,moy,decision,prochaine_methode,hop2_done,giveaway_source,mcp_status_daily,verif_vs_daily,preuve_2026_08_28
+@CryptoCavaleiro,Cavaleiro,5,2026-08-27,1.1,0/10,6.4,DROP_PRIMARY,"urllib x.com html_n>=80k → fxtwitter /status/{id} ×≥5 (newest=max created_at, pas 1er ID pin) → computerUse si 0 body. Interdit truncate 20k / jina / héritage 10/08",IMPROVER_YES_DAILY_FAIL_TRUNCATE,tweet_body_aug27_rexyz_affiliate_not_giveaway,needsAuth (ping namespace=X),DAILY_HOP1_TRUNCATED_20KB_0_IDS_HERITAGE_10_08,urllib 200 html_n=255441 0 datetime; 1er ID HTML=pin 02/04 2039778970074325492; newest 2092900767262757186 27/08 09:03Z re.xyz affiliate giveaway=NON 0 ticker; 122 fol / 1586 following; DROP (R1 fol+overlap) même si ≤48h
+@TeraHash,Tiago Cruz,1,2026-04-02,147.9,?,2.2,DO_NOT_ADD,Ne pas suivre RT/pin Cavaleiro,IMPROVER_YES,n/a,n/a,PIN_STILL_FIRST_HTML_ID,1er snowflake HTML 28/08 = 2039778970074325492 02/04 « Não poderia concordar mais !! »
+Sergey Nazarov,Chainlink WH,0,absent daily,n/a,LINK,6.0,CITE_AS_NEWS_NOT_KOL,CoinDesk/RSS pas hop-1 X,n/a,n/a,n/a,DAILY_CORRECT_ABSENT,0 mention KOL 28/08
+Brad Garlinghouse,Ripple WH,0,absent,n/a,XRP,6.0,CITE_AS_NEWS_NOT_KOL,news banker hours,n/a,n/a,n/a,DAILY_CORRECT_ABSENT,0 mention named
+Ray Dalio,macro WH,0,absent 28/08,n/a,BTC,5.8,CITE_AS_NEWS_NOT_KOL,titre CT seulement si présent,n/a,n/a,n/a,DAILY_ABSENT_OK,cité 23/08 via CT ; absent 25–28/08
+Tom Lee,ETH WH,0,absent 28/08,n/a,ETH,5.5,CITE_AS_NEWS_NOT_KOL,titre presse Bitmine,n/a,n/a,n/a,DAILY_ABSENT_OK,présent 25/08 RSS seulement — pas ADD
+Bitget CEO,exchange WH,0,absent 28/08,n/a,BTC,5.0,CITE_AS_NEWS_NOT_KOL,titre CT,n/a,n/a,n/a,DAILY_ABSENT_OK,non repris
+Kevin Warsh,Fed JH,0,calendrier 28/08 14:00 UTC,0,macro,6.5,CITE_AS_CALENDAR_NOT_KOL,Fed calendar + PM word-count thin,n/a,n/a,n/a,DAILY_CALENDAR_PLUS_PM,28/08 14:00 UTC gate daily — pas KOL crypto ; PM Stable 19.5% vol thin
+Lookonchain,on-chain,0,absent,n/a,BTC,7.0,KEEP_PROXY_LABELED,whale id pas tweet,n/a,n/a,n/a,NOT_IN_DAILY_28,tx absent — ne pas promouvoir PRIMARY
+Strategy/MSTR,treasury WH,0,absent daily,n/a,BTC,5.0,CITE_AS_NEWS_NOT_KOL,titre presse,n/a,n/a,n/a,DAILY_ABSENT_OK,Genius Group BTC treasury via crypto.news — NEWS_PROXY pas MSTR KOL
+presse:CoinDesk,,3,2026-08-28,0.1,majors,8.8,KEEP_PROXY_LABELED,RSS CDATA par titre NEWS_PROXY,n/a,n/a,n/a,DAILY_USED_WEAK_BLANKET,Ethena buyback / Kalshi-CT / MoonPay Solana — blanket « Proxy news » pas label par titre ; improver RSS Warsh + BTC 3-month high
+presse:crypto.news,,3,2026-08-28,0.1,broad,8.4,KEEP_PRIMARY_8S,timeout 8s (daily 18s),n/a,n/a,n/a,DAILY_RSS_USED_18S,Genius Group / Aave V4 / Trump ventures −4.7B — NEWS_PROXY ; timeout régression
+presse:CoinTelegraph,,2,2026-08-28,0.1,broad,7.5,KEEP_PROXY_LABELED,RSS,n/a,n/a,n/a,IMPROVER_RSS_PARTIAL_IN_DAILY,ENA +10% Ethena buybacks ; Trump-linked bank — daily a cité ENA via CoinDesk pas CT
+presse:CryptoQuant,,0,absent 28/08,n/a,BTC,6.5,CITE_AS_NEWS_NOT_KOL,titre presse pas hop X,n/a,n/a,n/a,DAILY_ABSENT_OK,présent 26/08 seulement
+presse:SEC.gov,,0,2026-08-18,10,reg,8.0,KEEP_PRIMARY,sec.gov RSS,n/a,n/a,n/a,DAILY_EMPTY_TITLES,daily 200 titres vides ; stale 18/08
