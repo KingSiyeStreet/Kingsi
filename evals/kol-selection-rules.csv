@@ -1,0 +1,18 @@
+id,regle,seuil,action_si_casse,preuve_2026_08_28,poids
+R1,PRIMARY X seulement si followers≥5k ET overlap watchlist≥2/10 ET newest tweet≤48h ET body≠giveaway ET body≠affiliate,5 conditions AND,DROP_PRIMARY,Cavaleiro 122 fol + 0 overlap + affiliate re.xyz 27/08 (≤48h mais FAIL fol+overlap+affiliate) → DROP,9
+R2,Hop wall obligatoire même si DROP ; html_n≥80000 (truncate 20k=FAIL),urllib full chaque run,FAIL section X,daily 28/08 html~20kB 0 IDs ; improver 255kB 5 IDs,10
+R3,Hop-2 = fxtwitter /status/{id} ×≥5 PUIS computerUse si 0 body — newest=max(created_at) pas 1er HTML ; interdit héritage mémoire,body tweet extrait CE run,X note <6 si 0 hop-2 ou newest hérité,daily héritage 10/08 ; improver newest 27/08 ; pin 02/04 = 1er ID,10
+R4,Giveaway = body du newest seulement (pas regex HTML),newest body,ne pas flagger affiliate/YT comme giveaway,HTML Giveaway=true FP ; newest 27/08 re.xyz affiliate ≠ giveaway ; Jul 10 giveaway n’est pas newest,9
+R5,NEWS_PROXY par titre (CoinDesk/CT/crypto.news/SEC/CryptoQuant) ≠ KOL,tweet≤48h hop X pour KOL,pas de trade hors-liste,daily blanket « Proxy news » = R5 faible ; ENA skip gate OK,8
+R6,Pin >90j (TeraHash 02/04) = DO_NOT_ADD même si visible,jours_stale>90,ne pas suivre RT,pin = 1er snowflake HTML 28/08,7
+R7,mcp_status d’un ping GetDynamicTools namespace=X (absent≠unauth). X_OAUTH_CLIENT_* ≠ MCP,1 ping + champ mcp_status,X note <6 si 0 ping ou label faux,28/08 daily+improver needsAuth — OK ping (progrès vs 26/08 catalog),10
+R8,Listes X = DROP_AS_HOP sans session,session X absente,ne pas scraper listes,tenu,6
+R9,Candidat PRIMARY nouveau seulement si : tweet body live + ticker checkable vs Vision + pas giveaway + pas affiliate + pas YT promo,4 AND,rester NEWS_PROXY,re.xyz 27/08 = 0 ticker → pas PRIMARY,9
+R10,Lookonchain / on-chain = KEEP_PROXY_LABELED seulement avec tx/whale id du jour,id tx présent,sinon absent OK,absent 28/08,6
+R11,"Δ Polymarket = HTTP CLOB clobTokenIds + interval=max (urllib, si 403 CF → WebFetch même URL). Échecs clob_http_count + hop_used",≥3 GET max + compteur,PM note <7 si 0 GET ou conditionId ou startTs-only ou skip markets?slug=,daily startTs 0 last2 0 markets?slug= → PM=5 ; improver WebFetch Hold n=744,10
+R12,"crypto.news clickbait = flag, jamais size ; timeout 8s",2e source + timeout 8s,ne pas sizer,timeout daily 18s = régression,7
+R13,Échecs d’accès = section tableau obligatoire. Header repo public sans persist_commit=FAIL,14 champs listés,honesty <6,28/08 section absente + thinking « checklist exclue » → honesty 3,10
+R14,"Si J-1 persisté last-daily-report.md, J0 DOIT persister (même repo public / owner-only)",commit daté du run,honesty FAIL + persist_commit=FAIL,24/08 OK ; 25+26+28/08 skip ; 27/08 trou cron daily,10
+R15,CLOB market=clobTokenIds[0] ; last2 ET d24 ; urllib 403 ≠ skip,n= sur max ou WebFetch,ne pas écrire Δ sans max/WebFetch,urllib 403 / WebFetch 200 ; Hold last2 0 / d24 +1.0 ; 82.5k last2 +2.3 / d24 −10.1,10
+R16,jina/nitter ≠ hop-2 ; inventer markdown = honesty FAIL,0 hop jina,X<6 + honesty<6,daily 28/08 nitter C&D puis « jina 403 markdown re.xyz » inventé,10
+R17,Dump followers dans le rapport FR (pas seulement le log outil),champ followers visible,X<6 si absent,"daily 122 dans tool out, 0 dans FR",8
